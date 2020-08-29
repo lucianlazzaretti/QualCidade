@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/qualcidade" />
+
+    <TextView
+        android:id="@+id/cidade"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="39dp"
+        android:text="Selecione o Estado"
+        android:textColor="#0d47a1"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/selecao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/cidade"
+        android:entries="@array/cities"
+        />
+
+<ScrollView
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/selecao"
+    android:layout_marginTop="30dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/lstCidades"
+            android:layout_width="match_parent"
+            android:layout_height="348dp"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:orientation="vertical" />
+    </LinearLayout>
+</ScrollView>
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="LPL Sistemas 2020 - Todos os direitos Reservados"
+        android:textSize = "12dp"
+        android:textColor="#90a4ae"
+        android:layout_below="@id/scroll"/>
+
+
+</RelativeLayout>
